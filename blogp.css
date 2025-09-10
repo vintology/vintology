@@ -1,0 +1,107 @@
+ body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.blog-menu {
+    width: 80%;
+    margin: 2rem auto;
+    display: grid; /* Para un diseño de tarjetas adaptable */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.blog-entry {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Para que la imagen no se salga del borde redondeado */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex; /* Para alinear imagen y contenido si se desea horizontalmente */
+    flex-direction: column; /* Apila imagen y contenido verticalmente */
+}
+
+.entry-thumbnail {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 200px; /* Altura fija para la imagen, ajusta según necesites */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.entry-content {
+    padding: 15px;
+}
+
+.entry-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.entry-title a {
+    text-decoration: none;
+    color: #333;
+}
+
+.entry-title a:hover {
+    color: #555;
+}
+
+.entry-meta {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.entry-author {
+    font-weight: bold;
+}
+
+.entry-excerpt {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    background: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Media Queries para responsividad si no se usa grid o para ajustes finos */
+@media (max-width: 768px) {
+    .blog-menu {
+        width: 95%;
+        /* Si no usas grid, podrías querer que las tarjetas ocupen todo el ancho: */
+        /* grid-template-columns: 1fr; */
+    }
+}
